@@ -13,7 +13,7 @@ services:
       - 80:80
   hidt-lab:
     container_name: hidt-lab
-    image: sawlinthant/hidt-lab:latest
+    image: sawlinthant/hidt-lab-web:latest
   hidt-lab-api:
     container_name: hidt-lab-api
     image: sawlinthant/hidt-lab-api:latest
