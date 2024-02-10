@@ -1,19 +1,11 @@
 version: "3.8"
 
 services:
-  lab-nginx:
-    container_name: hidt-lab-nginx
-    depends_on:
-      - hidt-lab
-      - hidt-lab-api
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
-    ports:
-      - 80:80
   hidt-lab:
     container_name: hidt-lab
     image: sawlinthant/hidt-lab-web:latest
+    ports:
+      - 3001:3001
   hidt-lab-api:
     container_name: hidt-lab-api
     image: sawlinthant/hidt-lab-api:latest
