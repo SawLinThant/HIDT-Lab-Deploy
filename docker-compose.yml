@@ -11,10 +11,10 @@ services:
       context: ./nginx
     ports:
       - 80:80
-  kdm-lab:
+  hidt-lab:
     container_name: hidt-lab
     image: sawlinthant/hidt-lab:latest
-  kdm-lab-api:
+  hidt-lab-api:
     container_name: hidt-lab-api
     image: sawlinthant/hidt-lab-api:latest
     command: bash -c "alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8001 --reload"
